@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>معامله‌گران | نمونه اولیه</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;900&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .active-tab {
+            color: #3b82f6;
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass p-4 flex justify-between items-center shadow-lg">
+        <div class="flex items-center gap-2">
+            <div class="bg-blue-600 p-2 rounded-lg">
+                <i data-lucide="zap" class="text-white w-5 h-5"></i>
+            </div>
+            <h1 class="text-xl font-black italic tracking-tighter">معامله‌گران</h1>
+        </div>
+        <button class="p-2 rounded-full hover:bg-slate-700 transition">
+            <i data-lucide="bell" class="w-6 h-6 text-slate-400"></i>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="p-4 space-y-6">
+        
+        <!-- Welcome Section -->
+        <section class="space-y-2">
+            <h2 class="text-2xl font-bold">سلام معامله‌گر! 👋</h2>
+            <p class="text-slate-400 text-sm">امروز بازار جهانی روی خوشی به شما دارد.</p>
+        </section>
+
+        <!-- Product Cards (Mockup) -->
+        <section class="grid grid-cols-1 gap-4">
+            <h3 class="font-bold flex items-center gap-2">
+                <i data-lucide="globe" class="w-5 h-5 text-blue-500"></i>
+                ویترین داغ امروز
+            </h3>
+
+            <!-- Card 1 -->
+            <div class="glass rounded-3xl overflow-hidden shadow-xl border border-white/5">
+                <div class="h-48 bg-slate-800 relative">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="ساعت هوشمند" class="w-full h-full object-cover opacity-80">
+                    <span class="absolute top-4 right-4 bg-blue-600 text-xs font-bold px-3 py-1 rounded-full">۱۵۰ تتر</span>
+                </div>
+                <div class="p-5 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-lg">ساعت هوشمند سری تجاری</h4>
+                        <p class="text-xs text-slate-400 mt-1">دارای قابلیت آنالیز لحظه‌ای قیمت ارزهای دیجیتال.</p>
+                    </div>
+                    <button onclick="openNegotiator('ساعت هوشمند سری تجاری')" class="w-full bg-slate-700/50 hover:bg-blue-600 py-3 rounded-2xl text-sm font-bold transition flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        مذاکره با دستیار هوشمند
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass rounded-3xl overflow-hidden shadow-xl border border-white/5">
+                <div class="h-48 bg-slate-800 relative">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="هدفون حرفه‌ای" class="w-full h-full object-cover opacity-80">
+                    <span class="absolute top-4 right-4 bg-blue-600 text-xs font-bold px-3 py-1 rounded-full">۸۰ تتر</span>
+                </div>
+                <div class="p-5 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-lg">هدفون نویزکنسلینگ پرو</h4>
+                        <p class="text-xs text-slate-400 mt-1">مناسب برای جلسات تجاری در محیط‌های شلوغ.</p>
+                    </div>
+                    <button onclick="openNegotiator('هدفون نویزکنسلینگ پرو')" class="w-full bg-slate-700/50 hover:bg-blue-600 py-3 rounded-2xl text-sm font-bold transition flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        مذاکره با دستیار هوشمند
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 inset-x-0 h-20 glass flex items-center justify-around px-2 z-50">
+        <button class="flex flex-col items-center gap-1 text-blue-500">
+            <i data-lucide="home" class="w-6 h-6"></i>
+            <span class="text-[10px] font-bold">داشبورد</span>
+        </button>
+        <button onclick="alert('قابلیت آپلود تصویر در نسخه نهایی فعال می‌شود.')" class="flex flex-col items-center gap-1 text-slate-400">
+            <i data-lucide="plus-circle" class="w-6 h-6"></i>
+            <span class="text-[10px] font-bold">ثبت کالا</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400">
+            <i data-lucide="wallet" class="w-6 h-6"></i>
+            <span class="text-[10px] font-bold">کیف پول</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400">
+            <i data-lucide="user" class="w-6 h-6"></i>
+            <span class="text-[10px] font-bold">پروفایل</span>
+        </button>
+    </nav>
+
+    <!-- AI Negotiator Modal -->
+    <div id="negotiator-modal" class="fixed inset-0 z-[100] bg-slate-900 hidden flex flex-col">
+        <header class="p-4 glass flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 p-2 rounded-xl">
+                    <i data-lucide="bot" class="text-white w-5 h-5"></i>
+                </div>
+                <div>
+                    <h4 id="product-name" class="font-bold text-sm">در حال مذاکره...</h4>
+                    <p class="text-[10px] text-green-500 font-bold uppercase">Online Agent</p>
+                </div>
+            </div>
+            <button onclick="closeNegotiator()" class="p-2">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </header>
+        
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 flex flex-col">
+            <!-- Messages appear here -->
+        </div>
+
+        <div class="p-4 glass flex gap-2">
+            <input id="user-input" type="text" placeholder="پیشنهاد قیمت بدهید..." class="flex-1 bg-slate-800 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 ring-blue-500">
+            <button onclick="sendMessage()" class="bg-blue-600 p-3 rounded-2xl shadow-lg shadow-blue-500/30">
+                <i data-lucide="send" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        const modal = document.getElementById('negotiator-modal');
+        const chatBox = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+
+        function openNegotiator(name) {
+            document.getElementById('product-name').innerText = name;
+            modal.classList.remove('hidden');
+            
+            // Initial AI Greeting
+            addMessage('ai', `سلام! من دستیار هوشمند فروشنده هستم. در مورد "${name}" چه پیشنهادی دارید؟ من قدرت تایید قیمت تا ۱۰٪ تخفیف را دارم.`);
+        }
+
+        function closeNegotiator() {
+            modal.classList.add('hidden');
+            chatBox.innerHTML = '';
+        }
+
+        function addMessage(sender, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `max-w-[80%] p-4 rounded-3xl text-sm leading-relaxed ${sender === 'ai' ? 'bg-slate-800 self-start rounded-tr-none' : 'bg-blue-600 text-white self-end rounded-tl-none'}`;
+            msgDiv.innerText = text;
+            chatBox.appendChild(msgDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            addMessage('user', text);
+            userInput.value = '';
+
+            // Simulate AI Delay
+            setTimeout(() => {
+                const responses = [
+                    "پیشنهاد شما را بررسی کردم. قیمت کمی پایین است، آیا می‌توانید کمی بالاتر بیایید؟",
+                    "من با سیستم تحلیل قیمت جهانی چک کردم، این قیمت منصفانه است.",
+                    "بسیار عالی! اگر الان معامله را نهایی کنید، هزینه ارسال را رایگان می‌کنم.",
+                    "سیستم هوشمند تایید کرد. لینک پرداخت برای شما صادر شد؟"
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                addMessage('ai', randomResponse);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
